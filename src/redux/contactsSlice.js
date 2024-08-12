@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { createSelector } from 'reselect';
 import { fetchContacts, addContact, deleteContact } from './contactsOps';
 
-// Slice definition
+
 const contactsSlice = createSlice({
   name: 'contacts',
   initialState: {
@@ -51,12 +51,12 @@ const contactsSlice = createSlice({
   },
 });
 
-// Selectors
+
 export const selectContacts = state => state.contacts.items;
 export const selectLoading = state => state.contacts.loading;
 export const selectError = state => state.contacts.error;
 
-// Memoized selector for filtered contacts
+
 export const selectNameFilter = state => state.filters.name;
 
 export const selectFilteredContacts = createSelector(
